@@ -1,0 +1,241 @@
+ul{
+    display: flex;
+    justify-content: space-between;  
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    background-color: black;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.container{
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 700px;
+    justify-content: center; /* Centraliza horizontalmente */ ;
+    align-items: center; /* Centraliza verticalmente */
+    flex-wrap: wrap;
+    margin: 0 auto; /* Centraliza o container na página */ 
+    gap: 20px; /* Espaço entre os itens */ 
+    padding: 20px; /* Espaço interno no container */ 
+}
+
+img{
+    height: 100%;
+}
+
+.box{
+    float: left;
+    padding-left: 50px;
+    justify-content: space-evenly;
+    
+}
+
+input{
+    margin: 2%;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Estilo básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Input de busca */
+.input-group {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.input-icon {
+    margin-right: -30px;
+    z-index: 1;
+}
+
+.input-icon i {
+    font-size: 16px;
+    color: #888;
+}
+
+/* Estilo para os links das imagens */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.box-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.box-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.box-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Media queries para dispositivos móveis */
+/* Para iPhone X no modo retrato */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+  nav ul {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .input-field {
+    width: 90%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .box-item {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .box-item img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Para iPhone X no modo paisagem */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .input-group {
+    flex-direction: row;
+  }
+
+  .input-field {
+    width: 300px;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .box-item {
+    width: 30%;
+  }
+
+  .box-item img {
+    max-width: 100%;
+    height: auto;
+  }
+}

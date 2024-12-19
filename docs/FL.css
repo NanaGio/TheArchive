@@ -1,0 +1,102 @@
+header{
+    background-color: black;
+    box-sizing: border-box;
+    height: 60px;
+    ul{
+        display: flex;
+        justify-content: space-between;  
+        list-style-type: none;
+        align-items: center;
+        padding: 16px;
+        font-size: 28px;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+    }
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    margin: 0;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    ul {
+        
+        display: none; /* Ocultar a lista inicialmente */
+        width: 100%;
+        margin: 0;
+
+    }
+
+    ul.active {
+        display: flex; /* Exibir lista quando a classe 'active' for adicionada */
+        margin: 0;
+    }
+
+}
+
+body{
+    margin: 0
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.box{
+    margin-left: 37%;
+    font-family:'Courier New', Courier, monospace
+   }
+
+  /* Container do slideshow */
+  .slideshow-container {
+    width: 30%;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    
+  }
+
+  /* Estilo dos slides */
+  .mySlides {
+    display: none;
+  }
+
+  /* Estilo das imagens */
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  /* Botões para navegação (anterior e próximo) */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+
+  

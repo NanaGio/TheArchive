@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="MOR.css">
+<header>
+    <div class="mobile-menu-icon">
+        <span>&#9776;</span> <!-- Ícone de hambúrguer -->
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">
+                    home
+                </a>
+            </li>
+            <li>
+                <a href="runways.html">
+                    runways 
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        function clickMenu(){
+            if (itens.style.display == 'flex'){
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'flex'
+            }
+        }
+        </script>
+</header> 
+
+<body>
+    <h1 class="box"> MORFUS Winter 2024 </h1>
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="mySlides">
+          <img src="img/004.jpg" alt="Imagem 1">
+        </div>
+      
+        <!-- Slide 2 -->
+        <div class="mySlides">
+          <img src="img/MOR1.jpg" alt="Imagem 2">
+        </div>
+      
+        <!-- Slide 3 -->
+        <div class="mySlides">
+          <img src="img/MOR2.jpg" alt="Imagem 3">
+        </div>
+      
+        <!-- Botões anterior/próximo -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      
+      <!-- Bolinhas de navegação -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+      
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+      
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+      
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+</body>

@@ -1,0 +1,148 @@
+
+
+header{
+    background-color: black;
+    box-sizing: border-box;
+    height: 60px;
+    ul{
+        display: flex;
+        justify-content: space-between;  
+        list-style-type: none;
+        align-items: center;
+        padding: 16px;
+        font-size: 28px;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+    }
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+}
+  
+.background-image {
+    background-image: url('img/001.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+img{
+    width: 39%;
+    margin-top: 2%;
+    margin-left: 29%;
+}
+
+/* Para iPhone X no modo retrato */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+  /* Estilos personalizados para iPhone X no modo retrato */
+  body {
+    background-color: #f0f0f0;
+  }
+
+  .background-image {
+    height: 100vh;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  nav ul {
+    display: block; /* Altera para menu vertical */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Remove os marcadores de lista */
+  }
+
+  nav ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    background-color: #ddd; /* Cor de fundo do item */
+    border-radius: 5px;
+  }
+
+  nav ul li a:hover {
+    background-color: #ccc; /* Efeito de hover */
+  }
+}
+
+/* Para iPhone X no modo paisagem */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+  /* Estilos personalizados para iPhone X no modo paisagem */
+  body {
+    background-color: #e0e0e0;
+  }
+
+  .background-image {
+    height: 100vh;
+  }
+
+  img {
+    max-width: 50%;
+    height: auto;
+  }
+
+  nav ul {
+    display: block; /* Altera para menu vertical no modo paisagem também */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+
+  nav ul li a:hover {
+    background-color: #ccc;
+  }
+}
